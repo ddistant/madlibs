@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JWW-Ko-jrD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a celebrity?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GW3-yE-Jy4">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -69,12 +75,6 @@
                                     <rect key="frame" x="131" y="140" width="120" height="21"/>
                                 </variation>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-GU-sBS">
-                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="88" width="51" height="31"/>
-                                </variation>
-                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mNC-EJ-epO">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -197,17 +197,23 @@
                                     <rect key="frame" x="104" y="309" width="298" height="21"/>
                                 </variation>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-GU-sBS">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="29" y="88" width="51" height="31"/>
+                                </variation>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="JWW-Ko-jrD"/>
                                 <exclude reference="GW3-yE-Jy4"/>
                                 <exclude reference="dQg-8m-wBU"/>
                                 <exclude reference="USb-eE-KEt"/>
                                 <exclude reference="pcv-mA-Fv7"/>
                                 <exclude reference="LKt-WY-Jh9"/>
                                 <exclude reference="JBZ-co-M9v"/>
-                                <exclude reference="fn8-GU-sBS"/>
                                 <exclude reference="mNC-EJ-epO"/>
                                 <exclude reference="VVs-D7-L8s"/>
                                 <exclude reference="ouq-QZ-C5p"/>
@@ -224,17 +230,18 @@
                                 <exclude reference="tiC-hk-ZA7"/>
                                 <exclude reference="e6i-z6-8ry"/>
                                 <exclude reference="fmI-a8-u0r"/>
+                                <exclude reference="fn8-GU-sBS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="JWW-Ko-jrD"/>
                                 <include reference="GW3-yE-Jy4"/>
                                 <include reference="dQg-8m-wBU"/>
                                 <include reference="USb-eE-KEt"/>
                                 <include reference="pcv-mA-Fv7"/>
                                 <include reference="LKt-WY-Jh9"/>
                                 <include reference="JBZ-co-M9v"/>
-                                <include reference="fn8-GU-sBS"/>
                                 <include reference="mNC-EJ-epO"/>
                                 <include reference="VVs-D7-L8s"/>
                                 <include reference="ouq-QZ-C5p"/>
@@ -251,13 +258,27 @@
                                 <include reference="tiC-hk-ZA7"/>
                                 <include reference="e6i-z6-8ry"/>
                                 <include reference="fmI-a8-u0r"/>
+                                <include reference="fn8-GU-sBS"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="appStoreToggle" destination="gCv-hl-EQF" id="afH-RR-3aN"/>
+                        <outlet property="backgroundImage" destination="JWW-Ko-jrD" id="6zC-Hg-mLL"/>
+                        <outlet property="bandToggle" destination="mNC-EJ-epO" id="4o2-cE-t7T"/>
+                        <outlet property="beatboxToggle" destination="X11-yQ-FKD" id="jcq-8U-fkF"/>
+                        <outlet property="celebToggle" destination="fn8-GU-sBS" id="lQ2-bd-WFk"/>
+                        <outlet property="knowSomeoneToggle" destination="ouq-QZ-C5p" id="rPA-Ql-3Ql"/>
+                        <outlet property="moneyText" destination="dQg-8m-wBU" id="YNC-Si-ET6"/>
+                        <outlet property="riddleText" destination="e6i-z6-8ry" id="XXM-i8-6s4"/>
+                        <outlet property="singleToggle" destination="rJ5-48-rfx" id="Yom-mx-pXp"/>
+                        <outlet property="swagToggle" destination="VVs-D7-L8s" id="cba-Vw-SST"/>
+                        <outlet property="tshirtToggle" destination="j5b-PZ-Wws" id="DAf-G5-RDh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="346.5" y="340"/>
+            <point key="canvasLocation" x="246" y="342"/>
         </scene>
     </scenes>
 </document>

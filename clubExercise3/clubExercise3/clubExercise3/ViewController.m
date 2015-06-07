@@ -9,6 +9,17 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (weak, nonatomic) IBOutlet UISwitch *celebToggle;
+@property (weak, nonatomic) IBOutlet UISwitch *bandToggle;
+@property (weak, nonatomic) IBOutlet UITextField *moneyText;
+@property (weak, nonatomic) IBOutlet UISwitch *swagToggle;
+@property (weak, nonatomic) IBOutlet UISwitch *knowSomeoneToggle;
+@property (weak, nonatomic) IBOutlet UISwitch *appStoreToggle;
+@property (weak, nonatomic) IBOutlet UITextField *riddleText;
+@property (weak, nonatomic) IBOutlet UISwitch *tshirtToggle;
+@property (weak, nonatomic) IBOutlet UISwitch *beatboxToggle;
+@property (weak, nonatomic) IBOutlet UISwitch *singleToggle;
 
 @end
 
