@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UZH-qh-ouq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spongebobfun" translatesAutoresizingMaskIntoConstraints="NO" id="UZH-qh-ouq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
@@ -153,8 +153,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKu-2k-zyq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Done filling in the mad lib? Click here!">
+                                    <color key="titleColor" red="0.3575713425" green="0.36768840489999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -381,6 +382,7 @@
                         <outlet property="adjective2" destination="8dA-RX-7Qj" id="UEY-Vh-tyz"/>
                         <outlet property="adjective3" destination="MfU-jr-qke" id="d8F-vS-bxV"/>
                         <outlet property="animal" destination="MAk-fD-myi" id="8i4-fd-egF"/>
+                        <outlet property="backgroundImage" destination="UZH-qh-ouq" id="VeR-hj-S4d"/>
                         <outlet property="bodyPart" destination="ys2-9X-u00" id="PR3-yj-oKc"/>
                         <outlet property="disneyCharacter1" destination="UGE-zy-5tG" id="5zB-4A-D76"/>
                         <outlet property="disneyCharacter2" destination="xWt-Fv-N3U" id="eK2-AB-T5h"/>
@@ -396,7 +398,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="78"/>
+            <point key="canvasLocation" x="958.5" y="63"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spongebobfun" width="600" height="600"/>
+    </resources>
 </document>
